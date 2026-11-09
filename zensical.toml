@@ -1,0 +1,93 @@
+[project]
+site_name = "MediaTrail"
+site_url = "https://aicon.github.io/mediatrail-docs/"
+site_description = "Manual for MediaTrail, a self-hosted library for what you watch, read, and play."
+site_author = "aicon"
+repo_name = "aicon/mediatrail-docs"
+repo_url = "https://github.com/aicon/mediatrail-docs"
+copyright = "Copyright &copy; 2026 aicon"
+edit_uri = "edit/main/docs/"
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+  { "English" = [
+    { "Start" = "index.md" },
+    { "Install" = "install.md" },
+    { "Library" = "library.md" },
+    { "Imports" = "imports.md" },
+    { "Runtime" = "runtime.md" },
+    { "Accounts" = "accounts.md" },
+    { "Looking after it" = "care.md" },
+  ] },
+  { "Magyar" = [
+    { "Kezdés" = "hu/index.md" },
+    { "Telepítés" = "hu/install.md" },
+    { "Könyvtár" = "hu/library.md" },
+    { "Import" = "hu/imports.md" },
+    { "Környezet" = "hu/runtime.md" },
+    { "Fiókok" = "hu/accounts.md" },
+    { "Karbantartás" = "hu/care.md" },
+  ] },
+]
+
+exclude_docs = """
+LIVE_PLAYBACK_NOW_WATCHING.md
+screenshots/**
+"""
+
+[project.theme]
+variant = "modern"
+language = "en"
+logo = "assets/logo.png"
+favicon = "assets/logo.png"
+features = [
+  "content.code.copy",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "search.suggest",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+primary = "indigo"
+accent = "indigo"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+primary = "indigo"
+accent = "indigo"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/aicon/mediatrail-docs"
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.tables]
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.superfences]
