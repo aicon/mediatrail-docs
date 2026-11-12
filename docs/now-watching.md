@@ -6,6 +6,8 @@ Multi-device Now Watching for MediaTrail (`aicon/MediaTrail`). Companion apps re
 
 Home page: one strip per device that is currently playing or paused.
 
+![Now Watching on the home page](screenshots/now-watching-en.png)
+
 - Blurred/darkened backdrop + left poster (poster and title open the media/season page)
 - Green **NOW WATCHING** or amber **PAUSED** badge + “Started … ago”
 - Device label on the strip (automatic or renamed)

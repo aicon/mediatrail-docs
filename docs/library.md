@@ -1,14 +1,14 @@
-# Library
+﻿# Library
 
 [Magyar változat](hu/library.md)
 
 The home page and the sidebar are the library. Movies, series, seasons, and the other types each have their own list. Search on a list looks through that person's entries.
 
-While a title is playing or paused, **Now Watching** strips can sit at the top of the home page — one strip per companion device (phone, each TV). Each strip shows the title, the episode, how much is already watched, the time left, and a device label you can rename. Dismiss or stop on one device leaves the others alone. When the companion sends `stop` at **90%** or more, the MediaTrail addon saves one finished watch. The picture is the Hungarian interface.
+While a title is playing or paused, **Now Watching** strips can sit at the top of the home page — one strip per companion device (phone, each TV). Each strip shows the title, the episode, how much is already watched, the time left, and a device label you can rename. Dismiss or stop on one device leaves the others alone. When the companion sends `stop` at **90%** or more, the MediaTrail addon saves one finished watch.
 
-![Now Watching on the home page](screenshots/now-watching-desktop2.png)
+![Now Watching on the home page](screenshots/now-watching-en.png)
 
-Install the MediaTrail addon address from Settings → Integrations → Nuvio in each [NuvioMobile-MT](https://github.com/aicon/NuvioMobile-MT) or [NuvioTV-MT](https://github.com/aicon/NuvioTV-MT) client. Details: [Now Watching](now-watching.md). Two-way watch-history sync (mark watched / unwatched) is optional on the same Integrations page; see [Imports → Nuvio](imports.md#two-way-interactive-sync).
+Install the MediaTrail addon address from Settings → Integrations → Nuvio in each [NuvioMobile-MT](https://github.com/aicon/NuvioMobile-MT) or [NuvioTV-MT](https://github.com/aicon/NuvioTV-MT) client. Details: [Live playback / Now Watching](now-watching.md). Two-way watch-history sync (mark watched / unwatched) is optional on the same Integrations page; see [Imports → Nuvio](imports.md#two-way-interactive-sync).
 
 Opening a title shows the catalog details and the tracking form. Status, score, progress, start and end dates, and a note belong to that entry. Repeating a finished title keeps another pass in the history. A series is a parent: seasons and episodes are separate rows, so marking one episode does not rewrite the whole show.
 

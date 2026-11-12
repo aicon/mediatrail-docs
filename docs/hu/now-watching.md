@@ -1,10 +1,10 @@
-# Most nézem
+﻿# Most nézem
 
 [English](../now-watching.md)
 
 Amíg egy társalkalmazás játszik vagy szünetel, a MediaTrail a kezdőlap tetején egy vagy több **„Most nézem”** sávot mutathat — eszközönként egyet.
 
-![A Most nézem sáv a kezdőlapon](../screenshots/now-watching-desktop2.png)
+![A Most nézem sáv a kezdőlapon](../screenshots/now-watching-hu.png)
 
 ## Mi kell hozzá
 
