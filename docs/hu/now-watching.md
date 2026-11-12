@@ -14,16 +14,18 @@ Amíg egy társalkalmazás játszik vagy szünetel, a MediaTrail a kezdőlap tet
 
 ## Beállítás
 
-1. A MediaTrailben nyisd meg a **Beállítások → Integrációk → Nuvio** oldalt.
-2. Másold ki a bővítmény címét (`…/nuvio/manifest.json`).
-3. Minden társalkalmazásban a **Beállítások → Bővítmények** alatt add hozzá ezt a címet, és vedd ki a régi scrobbler URL-t.
-4. Játssz le egy filmet vagy epizódot. Minden eszköz saját sávot kap.
+1. A MediaTrailben a **Beállítások → Integrációk → Nuvio** oldalt azzal a fiókkal nyisd meg, amelynél a sávoknak meg kell jelenniük.
+2. Másold ki a bővítmény címét (`…/nuvio/<token>/manifest.json`). Ez a cím ehhez a MediaTrail-fiókhoz tartozik.
+3. Minden társalkalmazásban a **Beállítások → Bővítmények** alatt add hozzá ezt a címet, és vedd ki a régi scrobbler vagy token nélküli MediaTrail URL-t.
+4. Játssz le egy filmet vagy epizódot. Minden eszköz saját sávot kap **azon** a fiókon.
 
 ## Több eszközös működés
 
 | Viselkedés | Részlet |
 | --- | --- |
+| Stabil sorrend | A sávok a megjelenés sorrendjét tartják; a progress nem ugratja előre az eszközt |
 | Eszközönként egy sáv | Telefon és két tévé egyszerre is megjelenhet, nem írják felül egymást |
+| MediaTrail-fiókonként | A lejátszás az addon URL tokenjét követi; más fiók nem látja a te sávjaidat |
 | Automatikus név | A kliens stabil azonosítót és címkét küld, pl. `telefon · Pixel 8` vagy `TV · Shield` |
 | Átnevezés | A sáv neve a kezdőlapon átírható; az egyéni név stop és elvetés után is megmarad |
 | Pause / stop / elvetés | Csak az adott eszköz sávját érinti |
