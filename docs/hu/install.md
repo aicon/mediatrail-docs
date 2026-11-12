@@ -37,6 +37,8 @@ docker compose up -d
 
 Nyisd meg a `http://localhost:8000` címet, és hozz létre fiókot. A regisztráció nyitva van, amíg le nem zárod. Erről a [Fiókok](accounts.md) oldal szól.
 
+Az élő „Most nézem” sávhoz a MediaTrailben nyisd meg a **Beállítások → Integrációk → Nuvio** oldalt, másold ki a bővítmény címét, add hozzá minden társalkalmazásban a **Beállítások → Bővítmények** alatt, és vedd ki a régi scrobbler URL-t. Részletek: [Most nézem](now-watching.md).
+
 Az indulás első másodperceiben az állapotvizsgálat egyszer elbukhat, mert az alkalmazás még nem figyel. Ha a következő vizsgálat sikerül, az indulás rendben lezajlott. Részletek a [Karbantartás](care.md) oldalon.
 
 ## Nyilvános cím

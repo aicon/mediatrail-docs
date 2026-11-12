@@ -43,7 +43,8 @@ A film, a sorozat, az anime, a játék, a könyv, a képregény és a társasjá
 | `HARDCOVER_API` | Könyvek. Az értéknek a `Bearer` szóval és egy szóközzel kell kezdődnie. |
 | `COMICVINE_API` | Képregények. |
 | `BGG_API_TOKEN` | Társasjátékok. |
-| `TRAKT_API` és `TRAKT_API_SECRET` | Saját Trakt-alkalmazás, zárt importhoz vagy saját kerethez. |
+| `TRAKT_API` és `TRAKT_API_SECRET` | Saját Trakt-alkalmazás a jelenlegi zárt importhoz, vagy saját kerethez. |
+| `TRAKT_API_PKCE` | Új Trakt-alkalmazás Client ID-ja. Ezek az alkalmazások nem adnak titkot. Az importoldal ezt kínálja eszközkódos belépésként. Az ingyenes Trakt-fiók csak két alkalmazást enged bekötni. |
 | `ANILIST_ID` és `ANILIST_SECRET` | Saját AniList-alkalmazás, zárt importhoz. |
 | `SIMKL_ID` és `SIMKL_SECRET` | Saját Simkl-alkalmazás. |
 
@@ -56,3 +57,14 @@ A `SOCIAL_PROVIDERS` a django-allauth szolgáltatómoduljainak vesszővel elvál
 A `SOCIALACCOUNT_ONLY` `True` értéke elrejti a jelszavas belépést. A `REDIRECT_LOGIN_TO_SSO` `True` értéke a belépőoldalt egyből a külső szolgáltatóhoz küldi.
 
 A szolgáltatónál regisztrált visszairányítási cím a MediaTrail nyilvános címe, plusz az az útvonal, amelyet a szolgáltató vár. A `URLS` ugyanaz a cím legyen, különben a visszaút elutasításra kerül.
+
+## „Most nézem” idle időzítők
+
+A társalkalmazások a beépített MediaTrail addonon keresztül hajtják az élő sávokat. Az elmaradt `stop` eseményeket ezek az opcionális felülírások takarítják (a legtöbb telepítésen a gyári érték elég):
+
+| Változó | Alapérték | Szerep |
+| --- | --- | --- |
+| `LIVE_PLAYBACK_WATCHING_STALE_SECONDS` | `180` | A progress nélküli `watching` sáv ennyi idő után törlődik |
+| `LIVE_PLAYBACK_PAUSED_STALE_SECONDS` | `600` | A magára hagyott `paused` sáv ennyi idő után törlődik |
+
+Lásd: [Most nézem](now-watching.md).
