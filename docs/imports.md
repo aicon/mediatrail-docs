@@ -13,7 +13,7 @@ The history list below the sources shows the last seven days. A task that says i
 
 ## Nuvio
 
-Nuvio is the first source. It reads movies and episodes from one Nuvio profile. Optional **two-way interactive watch-history sync** is configured under Settings → Integrations → Nuvio (see below). Live **Now Watching** from the companion apps is a separate path: the built-in MediaTrail addon receives `player` events with a per-device id. History import and watch-history sync do not replace those device strips. See [Library](library.md) and [Now Watching](now-watching.md).
+Nuvio is the first source. It reads movies and episodes from one Nuvio profile. Optional **two-way interactive watch-history sync** is configured under Settings → Integrations → Nuvio (see below). Live **Now Watching** from the companion apps is a separate path: the built-in MediaTrail addon receives `player` events with a per-device id. History import and watch-history sync do not replace those device strips. See [Library](library.md) and [Live playback / Now Watching](LIVE_PLAYBACK_NOW_WATCHING.md).
 
 Credentials, cursor, and imported rows belong to the signed-in MediaTrail user only (`NuvioAccount` is one per account). Another MediaTrail user on the same site keeps a separate Nuvio login and library.
 
@@ -60,8 +60,8 @@ These sources use the same mode and frequency controls.
 
 | Source | What you provide | Notes |
 | --- | --- | --- |
-| Trakt | A public username, or a connect button for a private profile | A private profile needs your own Trakt application id and secret. See [Runtime](runtime.md). |
-| Simkl | A connect button | A private import needs your own Simkl id and secret if you replace the built-in client. |
+| Trakt | A public username, private API login (browser PKCE on `auth.trakt.tv`, or device code), or a website export ZIP | Private login needs `TRAKT_API_PKCE` (modern Trakt app, no secret). Device code stays available for TVs and limited-input devices. The ZIP comes from Trakt → Settings → Export (max 50 MB). Corrupt or empty archives are rejected before the import starts. “Only new items” skips titles you already have. |
+| Simkl | A connect button | Needs operator keys: register a **new** AUTH V2 app at [simkl.com/settings/developer](https://simkl.com/settings/developer/) (V1 ids cannot upgrade). Prefer **Server apps & services**, set `SIMKL_V2_ID` / `SIMKL_V2_SECRET`, redirect `{URLS}/import/simkl_private`. Step-by-step: [Runtime → Simkl AUTH V2](runtime.md#simkl-auth-v2-get-keys-and-connect). Existing V1 tokens work until ~April 2027; reconnect after enabling V2. |
 | MyAnimeList | A public username | |
 | AniList | A public username, or a connect button | A private profile needs your own AniList application. |
 | Kitsu | The numeric user id from the profile address | |
