@@ -1,4 +1,4 @@
-# Install
+﻿# Install
 
 [Magyar változat](hu/install.md)
 
@@ -21,6 +21,8 @@ services:
     environment:
       TZ: Europe/Budapest
       SECRET: replace-with-a-long-random-string
+      # Uncomment and set if you use private Trakt import (activate code):
+      # TRAKT_API_PKCE:
     volumes:
       - ./db:/mediatrail/db
 ```
@@ -37,7 +39,7 @@ docker compose up -d
 
 Open `http://localhost:8000` and create an account. Registration is open unless you turn it off. See [Accounts](accounts.md).
 
-For live Now Watching from Nuvio companion apps, open **Settings → Integrations → Nuvio**, copy that account’s addon address (it includes your MediaTrail token) into each companion under Addons. Details: [Now Watching](now-watching.md).
+For live Now Watching from Nuvio companion apps, open **Settings → Integrations → Nuvio**, copy that account’s addon address (it includes your MediaTrail token) into each companion under Addons. Details: [Live playback / Now Watching](now-watching.md).
 
 On the first seconds of a start, the health check can fail once because the application is not listening yet. A following check that returns success means the start finished. See [Looking after it](care.md).
 
