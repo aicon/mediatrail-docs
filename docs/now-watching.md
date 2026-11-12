@@ -34,8 +34,8 @@ While a companion app is playing or paused, MediaTrail can show one or more **No
 
 Seek should also send progress so the strip stays in sync. Leaving the player should send `stop`.
 
-## Not the same as Nuvio import
+## Not the same as Nuvio import or watch-history sync
 
-[Imports](imports.md) can pull finished history from a Nuvio profile on a schedule. That path does not drive the live strips, and it does not replace per-device Now Watching rows.
+[Imports](imports.md) can pull finished history from a Nuvio profile, and optional [two-way interactive sync](imports.md#two-way-interactive-sync) keeps mark-watched / mark-unwatched in step with Nuvio Cloud. Those paths update movie and episode history; they do not drive the live strips, and they do not replace per-device Now Watching rows.
 
 The library overview is on [Library](library.md).

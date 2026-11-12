@@ -34,8 +34,8 @@ Amíg egy társalkalmazás játszik vagy szünetel, a MediaTrail a kezdőlap tet
 
 Seek után is mennie kell progressnek, hogy a sáv ne maradjon le. A lejátszóból kilépéskor `stop` kell.
 
-## Nem ugyanaz, mint a Nuvio import
+## Nem ugyanaz, mint a Nuvio import vagy az előzményszinkron
 
-Az [Import](imports.md) ütemezve behozhatja a Nuvio-profil befejezett előzményét. Az az út nem hajtja az élő sávokat, és nem cseréli le az eszközönkénti „Most nézem” sorokat.
+Az [Import](imports.md) ütemezve behozhatja a Nuvio-profil befejezett előzményét, és az opcionális [kétirányú interaktív szinkron](imports.md#nuvio) a megnézett / nem megtekintett jelöléseket tartja egyben a Nuvio Clouddal. Ezek az utak a film- és epizódelőzményt frissítik; az élő sávokat nem hajtják, és nem cserélik le az eszközönkénti „Most nézem” sorokat.
 
 A könyvtár áttekintése a [Könyvtár](library.md) oldalon van.
