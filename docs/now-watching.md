@@ -6,8 +6,6 @@ Multi-device Now Watching for MediaTrail (`aicon/MediaTrail`). Companion apps re
 
 Home page: one strip per device that is currently playing or paused.
 
-![Now Watching on the home page](screenshots/now-watching-en.png)
-
 - Blurred/darkened backdrop + left poster (poster and title open the media/season page)
 - Green **NOW WATCHING** or amber **PAUSED** badge + “Started … ago”
 - Device label on the strip (automatic or renamed)
@@ -86,6 +84,8 @@ Percent = `floor(100 * clamp(position,0,duration) / duration)` when `duration_ms
 - `GET /nuvio/<token>/manifest.json`
 - `GET /nuvio/<token>/player/{type}/{id}/{extra}.json` — query/extra carries `action`, `currentTime`, `duration`, `deviceId`, `deviceName`
 - Legacy untokened `/nuvio/manifest.json` and `/nuvio/player/…` only work when the site has exactly one account
+
+Library mark watched / unwatched from the companion is a **separate** Bearer endpoint (`POST /nuvio/watched.json`) — do not use the player route for that. See [Imports → Companion mark / unmark](imports.md#companion-mark--unmark-post-nuviowatchedjson).
 
 **Home (session user):**
 
